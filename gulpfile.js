@@ -51,7 +51,7 @@ sass = require('gulp-sass'), //sass
 concat = require("gulp-concat"), //合并js文件
 
 
-//  文件修改后台监视,实时刷新页面
+//  文件修改后台监视,实时刷新页面,所有的浏览器都会刷新
     browserSync = require("browser-sync"),
     path = {
         HTML : "src/html/*.html",
@@ -62,7 +62,7 @@ concat = require("gulp-concat"), //合并js文件
 gulp.task("serve", ["css", "js-watch", "html"], function() {
     browserSync.init({
         server : "./src",
-        index: 'html/test.html'
+        index : 'index.html'
     });
 
     gulp.watch(path.CSS, ["css"]);
@@ -91,8 +91,7 @@ gulp.task("html", function() {
 })
 
 
-//如果想添加对CSS的监听,想上面监听less html js 一样
-//我既然用了less就不用监听css了
+//我如果用了less/sass就不用监听css了
 
 
 /*压缩js

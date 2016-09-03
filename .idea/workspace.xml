@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c57928d-7c80-43b2-955b-cad5d0f60418" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/css/test.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/html/test.html" afterPath="$PROJECT_DIR$/src/html/test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/test.css" afterPath="$PROJECT_DIR$/src/css/test.css" />
     </list>
     <ignored path="RootGulp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,8 +48,8 @@
       <file leaf-file-name="test.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/css/test.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23613596">
-              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.19677997">
+              <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -474,8 +471,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/css/test.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23613596">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.19677997">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
           <folding />
         </state>
       </provider>
