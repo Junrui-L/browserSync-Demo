@@ -61,8 +61,8 @@ concat = require("gulp-concat"), //合并js文件
 
 gulp.task("serve", ["css", "js-watch", "html"], function() {
     browserSync.init({
-        server : "./",
-        index: 'src/html/test.html'
+        server : "./src",
+        index: 'html/test.html'
     });
 
     gulp.watch(path.CSS, ["css"]);
