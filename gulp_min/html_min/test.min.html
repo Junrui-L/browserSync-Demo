@@ -1,0 +1,17 @@
+<!DOCTYPE html><html><head><meta charset=UTF-8><title>网页遮罩层实例</title><meta name=viewport content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width,height=device-height"><link rel=stylesheet href=../css/test.css><script src=//cdn.bootcss.com/jquery/3.1.0/jquery.js></script></head><body><div id=main><a href=# onclick=showBg();>点以查看遮罩效果</a></div><ul style="margin: 0 auto"><li>1</li></ul><div id=fullbg></div><div id=dialog><p class=close><a href=# onclick=closeBg();>关闭</a></p><p>正在加载，请稍后、、、、</p></div></body><script type=text/javascript>
+    //显示灰色 jQuery 遮罩层
+    function showBg() {
+        var bh = $("body").height();
+        var bw = $("body").width();
+        $("#fullbg").css({
+            height: bh,
+            width: bw,
+            display: "block"
+        });
+        $("#dialog").show();
+    }
+    //关闭灰色 jQuery 遮罩
+    function closeBg() {
+        $("#fullbg,#dialog").hide();
+    }
+</script></html>

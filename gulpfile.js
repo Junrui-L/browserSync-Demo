@@ -151,13 +151,13 @@ gulp.task('minify-css', function () {
 
 /*sass编译并压缩**/
 gulp.task('sass', function () {
-    return gulp.src('src/sass/*.scss')
+    return gulp.src('src/scss/*.scss')
         .pipe(sass({style: 'expanded'}))
         .pipe(gulp.dest('src/css'))
         .pipe(minifyCss())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('gulp_min/css_min'))
-        .pipe(notify({message: 'sass编译完成'}));
+        .pipe(notify({message: 'sass编译压缩完成在/css_min/*.min.css'}));
 
 
 });
