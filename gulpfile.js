@@ -55,21 +55,25 @@ var gulp = require('gulp'),
 
 
 //  文件修改后台监视,实时刷新页面,所有的浏览器都会刷新
-    browserSync = require("browser-sync"),
+    browserSync = require("browser-sync").create(),
     path = {
-        HTML: "src/html/*.html",
+        HTML: "src/**/*.html",
+		SCSS: "src/scss/*.scss",
         CSS: "src/css/*.css",
         JS: "src/js/*.js"
     };
 
-gulp.task("serve", ["css", "js-watch", "html"], function () {
+gulp.task("serve", [ "html","scss","css", "js-watch"], function () {
     browserSync.init({
         port: 3939,                  //修改默认的端口3000，ui端口是3001
         server: "./src",           //从何处加载服务器
-        startPath: 'index.html',    //默认加载的页面 ，也可用index
+		startPath: 'index.html',    //默认加载的页面 ，也可用index
+		online: "true",
+		scrollProportionally: "false", //gundong
         browser: ["chrome", "firefox"] //打开的浏览器
     });
-
+	
+    gulp.watch(path.SCSS, ["scss"]);
     gulp.watch(path.CSS, ["css"]);
     gulp.watch(path.JS, ["js-watch"]);
     gulp.watch(path.HTML, ["html"]);
@@ -77,6 +81,13 @@ gulp.task("serve", ["css", "js-watch", "html"], function () {
         browserSync.reload;
     });
 });
+
+gulp.task("scss", function () {
+    gulp.src(path.SCSS)
+		.pipe(sass({style: 'expanded'}))
+        .pipe(gulp.dest('src/css'))
+        .pipe(browserSync.stream());
+})
 
 
 gulp.task("css", function () {
